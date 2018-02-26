@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4AC6349E88B5E1F3E36DFDF2 /* Pods_VaporFirebaseDemo_ClientApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9E062A6048BCB3A6EC0F99 /* Pods_VaporFirebaseDemo_ClientApp.framework */; };
 		A4B3071E2043BB100010AB4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3071D2043BB100010AB4B /* AppDelegate.swift */; };
 		A4B307202043BB100010AB4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3071F2043BB100010AB4B /* ViewController.swift */; };
 		A4B307232043BB100010AB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B307212043BB100010AB4B /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08E18EA31187F021B84F5E89 /* Pods-VaporFirebaseDemo-ClientApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaporFirebaseDemo-ClientApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VaporFirebaseDemo-ClientApp/Pods-VaporFirebaseDemo-ClientApp.release.xcconfig"; sourceTree = "<group>"; };
 		A4B3071A2043BB100010AB4B /* VaporFirebaseDemo-ClientApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VaporFirebaseDemo-ClientApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B3071D2043BB100010AB4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B3071F2043BB100010AB4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		A4B307242043BB100010AB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B307272043BB100010AB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B307292043BB100010AB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB60EE4AFC8E71C7260E5C92 /* Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VaporFirebaseDemo-ClientApp/Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BC9E062A6048BCB3A6EC0F99 /* Pods_VaporFirebaseDemo_ClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaporFirebaseDemo_ClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC6349E88B5E1F3E36DFDF2 /* Pods_VaporFirebaseDemo_ClientApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71EAC9271353C876AB21E316 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB60EE4AFC8E71C7260E5C92 /* Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig */,
+				08E18EA31187F021B84F5E89 /* Pods-VaporFirebaseDemo-ClientApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A4B307112043BB100010AB4B = {
 			isa = PBXGroup;
 			children = (
 				A4B3071C2043BB100010AB4B /* VaporFirebaseDemo-ClientApp */,
 				A4B3071B2043BB100010AB4B /* Products */,
+				71EAC9271353C876AB21E316 /* Pods */,
+				C54AE17C61B646D1B59AB206 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = "VaporFirebaseDemo-ClientApp";
 			sourceTree = "<group>";
 		};
+		C54AE17C61B646D1B59AB206 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC9E062A6048BCB3A6EC0F99 /* Pods_VaporFirebaseDemo_ClientApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A4B3072C2043BB100010AB4B /* Build configuration list for PBXNativeTarget "VaporFirebaseDemo-ClientApp" */;
 			buildPhases = (
+				41577D9B5F8A833EE238ED5B /* [CP] Check Pods Manifest.lock */,
 				A4B307162043BB100010AB4B /* Sources */,
 				A4B307172043BB100010AB4B /* Frameworks */,
 				A4B307182043BB100010AB4B /* Resources */,
+				831ACF926B836DBD800EFC60 /* [CP] Embed Pods Frameworks */,
+				36CE4D8D40752E7C7249BAC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36CE4D8D40752E7C7249BAC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VaporFirebaseDemo-ClientApp/Pods-VaporFirebaseDemo-ClientApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41577D9B5F8A833EE238ED5B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VaporFirebaseDemo-ClientApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		831ACF926B836DBD800EFC60 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VaporFirebaseDemo-ClientApp/Pods-VaporFirebaseDemo-ClientApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A4B307162043BB100010AB4B /* Sources */ = {
@@ -272,6 +350,7 @@
 		};
 		A4B3072D2043BB100010AB4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB60EE4AFC8E71C7260E5C92 /* Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +365,7 @@
 		};
 		A4B3072E2043BB100010AB4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08E18EA31187F021B84F5E89 /* Pods-VaporFirebaseDemo-ClientApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
