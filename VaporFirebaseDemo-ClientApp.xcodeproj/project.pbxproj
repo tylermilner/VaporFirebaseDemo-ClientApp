@@ -13,6 +13,7 @@
 		A4B307232043BB100010AB4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B307212043BB100010AB4B /* Main.storyboard */; };
 		A4B307252043BB100010AB4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B307242043BB100010AB4B /* Assets.xcassets */; };
 		A4B307282043BB100010AB4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B307262043BB100010AB4B /* LaunchScreen.storyboard */; };
+		A4B307302043BD650010AB4B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4B3072F2043BD650010AB4B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A4B307242043BB100010AB4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B307272043BB100010AB4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B307292043BB100010AB4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B3072F2043BD650010AB4B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB60EE4AFC8E71C7260E5C92 /* Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VaporFirebaseDemo-ClientApp/Pods-VaporFirebaseDemo-ClientApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BC9E062A6048BCB3A6EC0F99 /* Pods_VaporFirebaseDemo_ClientApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VaporFirebaseDemo_ClientApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +77,7 @@
 				A4B307212043BB100010AB4B /* Main.storyboard */,
 				A4B307242043BB100010AB4B /* Assets.xcassets */,
 				A4B307262043BB100010AB4B /* LaunchScreen.storyboard */,
+				A4B3072F2043BD650010AB4B /* GoogleService-Info.plist */,
 				A4B307292043BB100010AB4B /* Info.plist */,
 			);
 			path = "VaporFirebaseDemo-ClientApp";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B307282043BB100010AB4B /* LaunchScreen.storyboard in Resources */,
+				A4B307302043BD650010AB4B /* GoogleService-Info.plist in Resources */,
 				A4B307252043BB100010AB4B /* Assets.xcassets in Resources */,
 				A4B307232043BB100010AB4B /* Main.storyboard in Resources */,
 			);
