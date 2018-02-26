@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet private var randomNumberLabel: UILabel!
-    @IBOutlet private var updatedDateLabel: UILabel!
+    @IBOutlet private var nextUpdateLabel: UILabel!
     
     // MARK: - Properties
     
     private lazy var db = Firestore.firestore()
+    private weak var nextUpdateCountdownTimer: Timer?
+    private var nextUpdate: Date?
     
     // MARK: - Lifecycle
 
@@ -45,12 +47,36 @@ class ViewController: UIViewController {
     
     // MARK: - Private
     
+    private func updateCountdownLabel(for nextUpdate: Date) {
+        let now = Date()
+        let timeRemaining = Int(nextUpdate.timeIntervalSince(now))
+        
+        nextUpdateLabel.text = "Next update in \(timeRemaining) seconds"
+    }
+    
+    private func startCountdownTimer() {
+        nextUpdateCountdownTimer?.invalidate()
+        nextUpdateCountdownTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [weak self] (_) in
+            guard let nextUpdate = self?.nextUpdate else { return }
+            self?.updateCountdownLabel(for: nextUpdate)
+        })
+    }
+    
     private func update(withRandomNumberSnapshot snapshot: [String: Any]) {
-        guard let number = snapshot["number"] else {
+        guard let number = snapshot["number"] as? Int else {
             debugPrint("Invalid random number snapshot. Missing 'number' key.")
             return
         }
+        guard let nextUpdate = snapshot["nextUpdate"] as? Date else {
+            debugPrint("Invalid random number snapshot. Missing or invalid 'nextUpdate'.")
+            return
+        }
+        
+        self.nextUpdate = nextUpdate
         
         randomNumberLabel.text = "\(number)"
+        updateCountdownLabel(for: nextUpdate)
+        
+        startCountdownTimer()
     }
 }
