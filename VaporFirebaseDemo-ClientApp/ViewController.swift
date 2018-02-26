@@ -11,6 +11,11 @@ import Firebase
 
 class ViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet private var randomNumberLabel: UILabel!
+    @IBOutlet private var updatedDateLabel: UILabel!
+    
     // MARK: - Properties
     
     private lazy var db = Firestore.firestore()
@@ -26,13 +31,26 @@ class ViewController: UIViewController {
     // MARK: - Setup
     
     private func setupFirestoreRandomNumberListener() {
-        db.collection("randomNumbers").document("theRandomNumber").addSnapshotListener { (snapshot, error) in
-            guard let document = snapshot else {
+        db.collection("randomNumbers").document("theRandomNumber").addSnapshotListener { [weak self] (snapshot, error) in
+            guard let snapshotData = snapshot?.data() else {
                 debugPrint("Error fetching random number document: \(String(describing: error))")
                 return
             }
             
-            debugPrint(document.data())
+            debugPrint("New random number: \(snapshotData)")
+            
+            self?.update(withRandomNumberSnapshot: snapshotData)
         }
+    }
+    
+    // MARK: - Private
+    
+    private func update(withRandomNumberSnapshot snapshot: [String: Any]) {
+        guard let number = snapshot["number"] else {
+            debugPrint("Invalid random number snapshot. Missing 'number' key.")
+            return
+        }
+        
+        randomNumberLabel.text = "\(number)"
     }
 }
