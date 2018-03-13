@@ -4,6 +4,9 @@ The iOS client app for my VaporFirebaseDemo project showing how to use server-si
 # What Does It Do?
 This demo app is intended to be used in conjunction with my [Vapor-Firebase server-side Swift demo](https://github.com/tylermilner/VaporFirebaseDemo). The server publishes a random number to a Firebase Cloud Firestore database every 60 seconds. This client app simply observes the changes, showing the random number updates in realtime.
 
+When everything is up-and-running, it looks something like this:
+![video showing the app in action](Resources/client-app_demo.gif)
+
 # Getting Started
 If you'd like to run this client app yourself, here's what you need to do:
 
